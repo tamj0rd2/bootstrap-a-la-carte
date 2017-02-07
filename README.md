@@ -1,5 +1,5 @@
 # bootstrap-a-la-carte
-## Pick and choose different bootsrap components
+## Pick and choose different bootstrap components
 
 ### User Stories
 
