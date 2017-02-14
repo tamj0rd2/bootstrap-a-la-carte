@@ -1,8 +1,8 @@
 module.exports = {
-  entry: './index.jsx',
+  entry: './app/index.jsx',
   output: {
     path: __dirname,
-    filename: 'bundle.js'
+    filename: './assets/bundle.js'
   },
   module: {
     loaders: [
@@ -17,6 +17,10 @@ module.exports = {
       {
         test: /\.s?css$/,
         loaders: ['style-loader', 'css-loader', 'sass-loader']
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        loader: 'file-loader?name=assets/images/[name].[ext]'
       }
     ]
   }
