@@ -1,6 +1,6 @@
 var React = require('react')
 var ReactDOM = require('react-dom')
-require('./app/styles/index.css')
+require('./styles/index.css')
 
 
 let App = React.createClass({
@@ -41,7 +41,7 @@ let App = React.createClass({
         <main>
           <div className="content">
             <h1>Navbar</h1>
-            <img className="image-responsive" src="/images/navbar.png" alt="navbar example" />
+            <img className="image-responsive" src={require('./images/navbar.png')} alt="navbar example" />
             <h2>Code Snippet</h2>
             <pre className="prettyprint">
 &lt;nav class=&quot;navbar navbar-default&quot;&gt;
