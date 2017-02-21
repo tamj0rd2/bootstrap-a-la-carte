@@ -4,18 +4,23 @@ let Nav = React.createClass({
 
   getInitialState: function (props) {
     return {
+      isActiveLiNo: 6
     };
   },
 
+  clickHandler: function(i){
+    this.setState({ isActiveLiNo: i })
+    // console.log(this.state.isActiveLiNo);
+    this.render();
+  },
+
   getLi: function () {
-    // console.log("nav.jsx", this.props.components);
-    const lis = this.props.components.map( comp => {
-      return <li id={comp} className="each-component">
-              <a href="#">{comp}</a>
+    return this.props.components.map( (comp,i) => {
+      return <li id={comp} key={i} className={ this.state.isActiveLiNo === i ? "active" : "" } 
+              onClick={ () => this.clickHandler(i) }>
+                <a href="#">{comp}</a>
             </li>;
     })
-    console.log(lis);
-    return lis;
   },
   
   render: function () {

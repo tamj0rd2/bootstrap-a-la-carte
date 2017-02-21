@@ -99,6 +99,10 @@ nav {
   border-bottom: 1px solid #333;
 }
 
+#components li.active{
+  background: #333;
+}
+
 #components li:hover {
   background: #333;
   cursor: pointer;
