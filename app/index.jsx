@@ -7,13 +7,37 @@ require('./styles/index.css')
 
 
 let App = React.createClass({
+  
+  getInitialState: function () {
+    const components = [ 
+                          "Glyphicons" ,
+                          "Dropdowns",
+                          "Button groups",
+                          "Button dropdowns",
+                          "Input groups",
+                          "Navs",
+                          "Navbar",
+                          "Alerts",
+                          "Progress bars",
+                          "Media object",
+                          "List group",
+                          "Panels",
+                          "Responsive embed",
+                          "Wells"
+                        ];
+    return {
+      featureTitle: "Navbar",
+      bsComponents: components
+    };
+  },
+
   render: function () {
     return (
       <div>
-        <Nav/>
+        <Nav components= { this.state.bsComponents } />
         <main>
           <div className="content">
-            <h1>Navbar</h1>
+            <h1>{ this.state.featureTitle }</h1>
             {/* TODO: Use the actual example rather than an image*/}
             <img
               className="image-responsive"
