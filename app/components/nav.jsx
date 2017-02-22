@@ -7,13 +7,10 @@ let Nav = React.createClass({
     };
   },
 
-  clickHandler: function(i){
-    this.setState({ isActiveLiNo: i })
-    // console.log(this.state.isActiveLiNo);
-  },
-
   getLi: function () {
     // console.log("props",this.props.highlight);
+
+    // make individual li component for ul
     return this.props.components.map( (comp,i) => {
       return <li id={comp} data-key={i} className={ this.props.highlight === i ? "active" : "" } 
               onClick={ () => this.props.onClick(i) }>
