@@ -27,14 +27,24 @@ let App = React.createClass({
                         ];
     return {
       featureTitle: "Navbar",
+      currentTitleIndex: 6,
       bsComponents: components
     };
+  },
+
+  handleClick: function (i) {
+    // console.log(i);
+    this.setState({ currentTitleIndex: i,
+                    featureTitle: this.state.bsComponents[i]
+                 });
+    // console.log(this.state.currentTitleIndex);
+    // console.log(this.state.featureTitle);
   },
 
   render: function () {
     return (
       <div>
-        <Nav components= { this.state.bsComponents } />
+        <Nav highlight={this.state.currentTitleIndex} components={ this.state.bsComponents } onClick={ (i) => this.handleClick(i) } />
         <main>
           <div className="content">
             <h1>{ this.state.featureTitle }</h1>
