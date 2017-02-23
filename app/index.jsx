@@ -13,24 +13,21 @@ let App = React.createClass({
       selectedElementIndex: constants.elements.indexOf('Navbar'),
     }
   },
-  handleClick: function (i) {
-    // on click on a component get the index from callback function
-    this.setState({
-      selectedElementIndex: i,
-    })
+  changeSelectedElement: function (clickedLiIndex) {
+    this.setState({ selectedElementIndex: clickedLiIndex })
   },
   render: function () {
     let featureTitle = constants.elements[this.state.selectedElementIndex]
     return (
       <div>
         <Nav
-          highlight={this.state.selectedElementIndex}
-          onClick={ (i) => this.handleClick(i) }
+          selectedElementIndex={ this.state.selectedElementIndex }
+          liClicked={ this.changeSelectedElement }
         />
         <main>
           <div className="content">
             <h1>{ featureTitle }</h1>
-            {/* TODO: Use the actual example rather than an image*/}
+            {/* TODO: Use the actual example rather than an image */}
             <img
               className="image-responsive"
               src={require('./images/navbar.png')}

@@ -97,6 +97,9 @@ nav {
 #elements li {
   padding: 8px 10px;
   border-bottom: 1px solid #333;
+  color: #fff;
+  font-size: 98%;
+  color: #c3c3c3;
 }
 
 #elements li.active{
@@ -107,13 +110,6 @@ nav {
   background: #333;
   cursor: pointer;
   border-bottom: 1px solid #333;
-}
-
-#elements li a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 98%;
-  color: #c3c3c3;
 }
 
 .image-responsive {
