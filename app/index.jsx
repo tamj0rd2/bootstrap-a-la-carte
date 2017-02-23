@@ -9,33 +9,27 @@ require('./styles/index.css')
 
 let App = React.createClass({
   getInitialState: function () {
-    // store all elements locally to change the title names dynamically
     return {
-      // the current title displayed
-      featureTitle: 'Navbar',
-      // index of current title displayed
-      currentTitleIndex: 6,
-      // stored the elements as a state
-      bsElements: constants.elements
+      selectedElementIndex: constants.elements.indexOf('Navbar'),
     }
   },
   handleClick: function (i) {
     // on click on a component get the index from callback function
     this.setState({
-      currentTitleIndex: i,
-      featureTitle: this.state.bsElements[i]
+      selectedElementIndex: i,
     })
   },
   render: function () {
+    let featureTitle = constants.elements[this.state.selectedElementIndex]
     return (
       <div>
         <Nav
-          highlight={this.state.currentTitleIndex}
+          highlight={this.state.selectedElementIndex}
           onClick={ (i) => this.handleClick(i) }
         />
         <main>
           <div className="content">
-            <h1>{ this.state.featureTitle }</h1>
+            <h1>{ featureTitle }</h1>
             {/* TODO: Use the actual example rather than an image*/}
             <img
               className="image-responsive"

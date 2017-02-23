@@ -13,7 +13,7 @@ const elements = [
   'Panels',
   'Responsive embed',
   'Wells'
-]
+].sort()
 
 module.exports = {
   elements
