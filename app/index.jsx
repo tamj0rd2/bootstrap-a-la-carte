@@ -4,7 +4,7 @@ const constants = require('./scripts/constants.js')
 
 var Nav = require('./components/nav.jsx')
 var BootstrapPre = require('./components/bootstrap-pre.jsx')
-require('./styles/index.css')
+require('./styles/index.scss')
 
 
 let App = React.createClass({
