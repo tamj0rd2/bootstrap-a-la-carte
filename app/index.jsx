@@ -1,5 +1,6 @@
 var React = require('react')
 var ReactDOM = require('react-dom')
+const constants = require('./scripts/constants.js')
 
 var Nav = require('./components/nav.jsx')
 var BootstrapPre = require('./components/bootstrap-pre.jsx')
@@ -8,37 +9,21 @@ require('./styles/index.css')
 
 let App = React.createClass({
   getInitialState: function () {
-    // store all components locally to change the title names dynamically
-    const components = [
-      'Glyphicons' ,
-      'Dropdowns',
-      'Button groups',
-      'Button dropdowns',
-      'Input groups',
-      'Navs',
-      'Navbar',
-      'Alerts',
-      'Progress bars',
-      'Media object',
-      'List group',
-      'Panels',
-      'Responsive embed',
-      'Wells'
-    ]
+    // store all elements locally to change the title names dynamically
     return {
       // the current title displayed
       featureTitle: 'Navbar',
       // index of current title displayed
       currentTitleIndex: 6,
-      // stored the components as a state
-      bsComponents: components
+      // stored the elements as a state
+      bsElements: constants.elements
     }
   },
   handleClick: function (i) {
     // on click on a component get the index from callback function
     this.setState({
       currentTitleIndex: i,
-      featureTitle: this.state.bsComponents[i]
+      featureTitle: this.state.bsElements[i]
     })
   },
   render: function () {
@@ -46,7 +31,6 @@ let App = React.createClass({
       <div>
         <Nav
           highlight={this.state.currentTitleIndex}
-          components={ this.state.bsComponents }
           onClick={ (i) => this.handleClick(i) }
         />
         <main>

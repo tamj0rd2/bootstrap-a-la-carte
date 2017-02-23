@@ -21,12 +21,12 @@ body {
 *::-webkit-scrollbar {
     width: 0.5em;
 }
- 
+
 *::-webkit-scrollbar-track {
     box-shadow: inset 0 0 6px rgba(26, 26, 26, 0.9);
     -webkit-box-shadow: inset 0 0 6px rgba(26, 26, 26, 0.9);
 }
- 
+
 *::-webkit-scrollbar-thumb {
   background-color: #1d1f20;
   outline: 1px solid #1d1f20;
@@ -88,28 +88,28 @@ nav {
   overflow: auto;
 }
 
-#components {
+#elements {
   width: 100%;
   list-style-type: none;
   display: inline-block;
 }
 
-#components li {
+#elements li {
   padding: 8px 10px;
   border-bottom: 1px solid #333;
 }
 
-#components li.active{
+#elements li.active{
   background: #333;
 }
 
-#components li:hover {
+#elements li:hover {
   background: #333;
   cursor: pointer;
   border-bottom: 1px solid #333;
 }
 
-#components li a {
+#elements li a {
   text-decoration: none;
   color: #fff;
   font-size: 98%;

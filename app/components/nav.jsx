@@ -1,9 +1,10 @@
 var React = require('react')
+const constants = require('../scripts/constants.js')
 
 let Nav = React.createClass({
   getLi: function () {
     // make individual li component for ul
-    return this.props.components.map( (comp,i) => {
+    return constants.elements.map((comp,i) => {
       return (
         <li
           id={comp}
@@ -20,7 +21,7 @@ let Nav = React.createClass({
     return (
       <nav>
         <h1 className="title">Bootstrap 4.0</h1>
-        <ul id="components">
+        <ul id="elements">
           { this.getLi() }
         </ul>
       </nav>
