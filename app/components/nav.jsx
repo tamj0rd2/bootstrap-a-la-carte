@@ -1,24 +1,21 @@
 var React = require('react')
 
 let Nav = React.createClass({
-
-  getInitialState: function () {
-    return {
-    };
-  },
-
   getLi: function () {
-    // console.log("props",this.props.highlight);
-
     // make individual li component for ul
     return this.props.components.map( (comp,i) => {
-      return <li id={comp} data-key={i} className={ this.props.highlight === i ? "active" : "" } 
-              onClick={ () => this.props.onClick(i) }>
-                <a data-key={i} href="#">{comp}</a>
-            </li>;
+      return (
+        <li
+          id={comp}
+          data-key={i}
+          className={ this.props.highlight === i ? 'active' : '' }
+          onClick={ () => this.props.onClick(i)}
+        >
+          <a data-key={i} href="#">{comp}</a>
+        </li>
+      )
     })
   },
-  
   render: function () {
     return (
       <nav>
