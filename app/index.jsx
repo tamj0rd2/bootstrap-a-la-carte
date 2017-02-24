@@ -18,9 +18,9 @@ let App = React.createClass({
   },
   copyToClipboard: function(){
     console.log("click");
-    var textField = document.createElement('textarea')
+    var textField = document.createElement('textarea')  
     document.body.appendChild(textField);
-    textField.innerText = document.querySelector("pre").innerText.replace(/[\s][\s]/g, "\r\n");
+    textField.innerText = document.querySelector("pre").innerText;
     textField.select();
     document.execCommand('copy');
     textField.remove();
