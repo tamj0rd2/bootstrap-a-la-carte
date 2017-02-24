@@ -1,7 +1,7 @@
 var React = require('react')
 const constants = require('../scripts/constants.js')
 
-let Nav = React.createClass({
+let Navigation = React.createClass({
   propTypes: {
     selectedElementIndex: React.PropTypes.number.isRequired,
     liClicked: React.PropTypes.func.isRequired
@@ -34,4 +34,4 @@ let Nav = React.createClass({
   }
 })
 
-module.exports = Nav
+module.exports = Navigation
