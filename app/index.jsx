@@ -2,8 +2,23 @@ var React = require('react')
 var ReactDOM = require('react-dom')
 const constants = require('./scripts/constants.js')
 
-var Nav = require('./components/nav.jsx')
-var BootstrapPre = require('./components/bootstrap-pre.jsx')
+var Navigation = require('./components/navigation.jsx')
+const componentCode = [
+                      require('./components/elements/alerts-pre.jsx'),
+                      require('./components/elements/button-dropdowns-pre.jsx'),
+                      require('./components/elements/button-groups-pre.jsx'),
+                      require('./components/elements/dropdowns-pre.jsx'),
+                      require('./components/elements/glyphicons-pre.jsx'),
+                      require('./components/elements/input-groups-pre.jsx'),
+                      require('./components/elements/list-group-pre.jsx'),
+                      require('./components/elements/media-object-pre.jsx'),
+                      require('./components/elements/navbar-pre.jsx'),
+                      require('./components/elements/navs-pre.jsx'),
+                      require('./components/elements/panels-pre.jsx'),
+                      require('./components/elements/progress-bars-pre.jsx'),
+                      require('./components/elements/responsive-embed-pre.jsx'),
+                      require('./components/elements/wells-pre.jsx'),
+                    ]
 require('./styles/index.scss')
 
 
@@ -17,10 +32,11 @@ let App = React.createClass({
     this.setState({ selectedElementIndex: clickedLiIndex })
   },
   render: function () {
-    let featureTitle = constants.elements[this.state.selectedElementIndex]
+    const featureTitle = constants.elements[this.state.selectedElementIndex]
+    const BootstrapElement = componentCode[this.state.selectedElementIndex]
     return (
       <div>
-        <Nav
+        <Navigation
           selectedElementIndex={ this.state.selectedElementIndex }
           liClicked={ this.changeSelectedElement }
         />
@@ -34,7 +50,7 @@ let App = React.createClass({
               alt="navbar example"
             />
             <h2>Code Snippet</h2>
-            <BootstrapPre/>
+            <BootstrapElement/>
           </div>
         </main>
         <footer>

@@ -54,7 +54,7 @@ let navbarString = `<nav class="navbar navbar-default">
   </div><!-- /.container-fluid -->
 </nav>`
 
-let BootstrapPre = React.createClass({
+let NavbarPre = React.createClass({
   render: function () {
     return (
       <pre className="prettyprint">{navbarString}</pre>
@@ -62,4 +62,4 @@ let BootstrapPre = React.createClass({
   }
 })
 
-module.exports = BootstrapPre
+module.exports = NavbarPre
