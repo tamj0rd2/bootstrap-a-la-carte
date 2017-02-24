@@ -1,11 +1,11 @@
-var React = require("React");
+var React = require("React")
 
-let ProgressBars = React.createClass({
+let ProgressBar = React.createClass({
   render: function () {
     return (
           <pre className="prettyprint">Code for Progress-bars Coming Soon</pre>
-    );
+    )
   }
-});
+})
 
-module.exports = ProgressBars; 
+module.exports = ProgressBar 

@@ -1,11 +1,11 @@
-var React = require("React");
+var React = require("React")
 
-let Alerts = React.createClass({
+let Alert = React.createClass({
   render: function () {
     return (
       <pre className="prettyprint">Code for Alert Coming Soon</pre>
-    );
+    )
   }
-});
+})
 
-module.exports = Alerts; 
+module.exports = Alert 

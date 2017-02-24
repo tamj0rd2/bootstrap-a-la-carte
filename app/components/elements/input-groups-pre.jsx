@@ -1,11 +1,11 @@
-var React = require("React");
+var React = require("React")
 
-let InputGroups = React.createClass({
+let InputGroup = React.createClass({
   render: function () {
     return (
       <pre className="prettyprint">Code for Input Groups Coming Soon</pre>
-    );
+    )
   }
-});
+})
 
-module.exports = InputGroups; 
+module.exports = InputGroup

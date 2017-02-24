@@ -4,21 +4,21 @@ const constants = require('./scripts/constants.js')
 
 var Navigation = require('./components/navigation.jsx')
 const componentCode = [
-                      require('./components/alerts-pre.jsx'),
-                      require('./components/button-dropdowns-pre.jsx'),
-                      require('./components/button-groups-pre.jsx'),
-                      require('./components/dropdowns-pre.jsx'),
-                      require('./components/glyphicons-pre.jsx'),
-                      require('./components/input-groups-pre.jsx'),
-                      require('./components/list-group-pre.jsx'),
-                      require('./components/media-object-pre.jsx'),
-                      require('./components/navbar-pre.jsx'),
-                      require('./components/navs-pre.jsx'),
-                      require('./components/panels-pre.jsx'),
-                      require('./components/progress-bars-pre.jsx'),
-                      require('./components/responsive-embed-pre.jsx'),
-                      require('./components/wells-pre.jsx'),
-                    ];
+                      require('./components/elements/alerts-pre.jsx'),
+                      require('./components/elements/button-dropdowns-pre.jsx'),
+                      require('./components/elements/button-groups-pre.jsx'),
+                      require('./components/elements/dropdowns-pre.jsx'),
+                      require('./components/elements/glyphicons-pre.jsx'),
+                      require('./components/elements/input-groups-pre.jsx'),
+                      require('./components/elements/list-group-pre.jsx'),
+                      require('./components/elements/media-object-pre.jsx'),
+                      require('./components/elements/navbar-pre.jsx'),
+                      require('./components/elements/navs-pre.jsx'),
+                      require('./components/elements/panels-pre.jsx'),
+                      require('./components/elements/progress-bars-pre.jsx'),
+                      require('./components/elements/responsive-embed-pre.jsx'),
+                      require('./components/elements/wells-pre.jsx'),
+                    ]
 require('./styles/index.scss')
 
 
