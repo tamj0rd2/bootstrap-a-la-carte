@@ -16,13 +16,13 @@ let App = React.createClass({
   changeSelectedElement: function (clickedLiIndex) {
     this.setState({ selectedElementIndex: clickedLiIndex })
   },
-  copyToClipboard: function(){
-    const textField = document.createElement('textarea');
-    document.body.appendChild(textField);
-    textField.innerText = document.querySelector("pre").innerText;
-    textField.select();
-    document.execCommand('copy');
-    textField.remove();
+  copyToClipboard: function () {
+    const textField = document.createElement('textarea')
+    document.body.appendChild(textField)
+    textField.innerText = document.querySelector("pre").innerText
+    textField.select()
+    document.execCommand('copy')
+    textField.remove()
   },
   render: function () {
     let featureTitle = constants.elements[this.state.selectedElementIndex]
