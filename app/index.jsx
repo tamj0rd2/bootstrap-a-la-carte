@@ -3,7 +3,7 @@ var ReactDOM = require('react-dom')
 const constants = require('./scripts/constants.js')
 
 var Navigation = require('./components/navigation.jsx')
-const putComponent = [
+const componentCode = [
                       require('./components/alerts-pre.jsx'),
                       require('./components/button-dropdowns-pre.jsx'),
                       require('./components/button-groups-pre.jsx'),
@@ -33,7 +33,7 @@ let App = React.createClass({
   },
   render: function () {
     const featureTitle = constants.elements[this.state.selectedElementIndex]
-    const Component = putComponent[this.state.selectedElementIndex]
+    const Component = componentCode[this.state.selectedElementIndex]
     return (
       <div>
         <Navigation
