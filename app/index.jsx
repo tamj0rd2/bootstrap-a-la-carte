@@ -16,6 +16,15 @@ let App = React.createClass({
   changeSelectedElement: function (clickedLiIndex) {
     this.setState({ selectedElementIndex: clickedLiIndex })
   },
+  copyToClipboard: function(){
+    console.log("click");
+    var textField = document.createElement('textarea')
+    document.body.appendChild(textField);
+    textField.innerText = document.querySelector("pre").innerText.replace(/[\s][\s]/g, "\r\n");
+    textField.select();
+    document.execCommand('copy');
+    textField.remove();
+  },
   render: function () {
     let featureTitle = constants.elements[this.state.selectedElementIndex]
     return (
@@ -39,7 +48,7 @@ let App = React.createClass({
         </main>
         <footer>
           <div className="options">
-            <a className="btn">Copy to Clipboard</a>
+            <a className="btn" onClick={ this.copyToClipboard }>Copy to Clipboard</a>
           </div>
         </footer>
       </div>
