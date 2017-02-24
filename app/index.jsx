@@ -17,8 +17,7 @@ let App = React.createClass({
     this.setState({ selectedElementIndex: clickedLiIndex })
   },
   copyToClipboard: function(){
-    console.log("click");
-    var textField = document.createElement('textarea')  
+    const textField = document.createElement('textarea');
     document.body.appendChild(textField);
     textField.innerText = document.querySelector("pre").innerText;
     textField.select();
