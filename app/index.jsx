@@ -33,7 +33,7 @@ let App = React.createClass({
   },
   render: function () {
     const featureTitle = constants.elements[this.state.selectedElementIndex]
-    const Component = componentCode[this.state.selectedElementIndex]
+    const BootstrapElement = componentCode[this.state.selectedElementIndex]
     return (
       <div>
         <Navigation
@@ -50,7 +50,7 @@ let App = React.createClass({
               alt="navbar example"
             />
             <h2>Code Snippet</h2>
-            <Component/>
+            <BootstrapElement/>
           </div>
         </main>
         <footer>
