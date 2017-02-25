@@ -4,21 +4,21 @@ const constants = require('./scripts/constants.js')
 
 var Navigation = require('./components/navigation.jsx')
 const componentCode = [
-                      require('./components/elements/alerts-pre.jsx'),
-                      require('./components/elements/button-dropdowns-pre.jsx'),
-                      require('./components/elements/button-groups-pre.jsx'),
-                      require('./components/elements/dropdowns-pre.jsx'),
-                      require('./components/elements/glyphicons-pre.jsx'),
-                      require('./components/elements/input-groups-pre.jsx'),
-                      require('./components/elements/list-group-pre.jsx'),
-                      require('./components/elements/media-object-pre.jsx'),
-                      require('./components/elements/navbar-pre.jsx'),
-                      require('./components/elements/navs-pre.jsx'),
-                      require('./components/elements/panels-pre.jsx'),
-                      require('./components/elements/progress-bars-pre.jsx'),
-                      require('./components/elements/responsive-embed-pre.jsx'),
-                      require('./components/elements/wells-pre.jsx'),
-                    ]
+  require('./components/elements/alert.jsx'),
+  require('./components/elements/button-dropdown.jsx'),
+  require('./components/elements/button-group.jsx'),
+  require('./components/elements/dropdown.jsx'),
+  require('./components/elements/glyphicon.jsx'),
+  require('./components/elements/input-group.jsx'),
+  require('./components/elements/list-group.jsx'),
+  require('./components/elements/media-object.jsx'),
+  require('./components/elements/navigation-bar.jsx'),
+  require('./components/elements/nav.jsx'),
+  require('./components/elements/panel.jsx'),
+  require('./components/elements/progress-bar.jsx'),
+  require('./components/elements/responsive-embed.jsx'),
+  require('./components/elements/well.jsx'),
+]
 require('./styles/index.scss')
 
 

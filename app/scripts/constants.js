@@ -1,18 +1,18 @@
 const elements = [
-  'Glyphicons' ,
-  'Dropdowns',
-  'Button groups',
-  'Button dropdowns',
-  'Input groups',
-  'Navs',
-  'Navbar',
-  'Alerts',
-  'Progress bars',
+  'Glyphicon' ,
+  'Dropdown',
+  'Button group',
+  'Button dropdown',
+  'Input group',
+  'Nav',
+  'Navigation bar',
+  'Alert',
+  'Progress bar',
   'Media object',
   'List group',
-  'Panels',
+  'Panel',
   'Responsive embed',
-  'Wells'
+  'Well'
 ].sort()
 
 module.exports = {
