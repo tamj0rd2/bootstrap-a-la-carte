@@ -2,41 +2,28 @@ var React = require('react')
 var ReactDOM = require('react-dom')
 const constants = require('./scripts/constants.js')
 
-var Navigation = require('./components/navigation.jsx')
-const componentCode = [
-  require('./components/elements/alert.jsx'),
-  require('./components/elements/button-dropdown.jsx'),
-  require('./components/elements/button-group.jsx'),
-  require('./components/elements/dropdown.jsx'),
-  require('./components/elements/glyphicon.jsx'),
-  require('./components/elements/input-group.jsx'),
-  require('./components/elements/list-group.jsx'),
-  require('./components/elements/media-object.jsx'),
-  require('./components/elements/navigation-bar.jsx'),
-  require('./components/elements/nav.jsx'),
-  require('./components/elements/panel.jsx'),
-  require('./components/elements/progress-bar.jsx'),
-  require('./components/elements/responsive-embed.jsx'),
-  require('./components/elements/well.jsx'),
-]
+var SiteNav = require('./components/navigation.jsx')
+var elements = require('./components/elements.jsx')
+
 require('./styles/index.scss')
 
 
 let App = React.createClass({
   getInitialState: function () {
     return {
-      selectedElementIndex: constants.elements.indexOf('Navbar'),
+      selectedElementIndex: constants.elementNames.indexOf('Navigation Bar'),
     }
   },
   changeSelectedElement: function (clickedLiIndex) {
     this.setState({ selectedElementIndex: clickedLiIndex })
   },
   render: function () {
-    const featureTitle = constants.elements[this.state.selectedElementIndex]
-    const BootstrapElement = componentCode[this.state.selectedElementIndex]
+    let featureTitle = constants.elementNames[this.state.selectedElementIndex]
+    let Pre = elements[featureTitle.replace(' ', '')]
+
     return (
       <div>
-        <Navigation
+        <SiteNav
           selectedElementIndex={ this.state.selectedElementIndex }
           liClicked={ this.changeSelectedElement }
         />
@@ -50,7 +37,7 @@ let App = React.createClass({
               alt="navbar example"
             />
             <h2>Code Snippet</h2>
-            <BootstrapElement/>
+            <Pre/>
           </div>
         </main>
         <footer>
