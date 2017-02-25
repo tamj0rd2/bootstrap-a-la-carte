@@ -1,4 +1,4 @@
-var React = require('React')
+var React = require('react')
 
 let ResponsiveEmbed = React.createClass({
   render: function () {
