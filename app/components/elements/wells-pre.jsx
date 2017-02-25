@@ -1,4 +1,4 @@
-var React = require("React")
+var React = require('React')
 
 let Well = React.createClass({
   render: function () {
@@ -8,4 +8,4 @@ let Well = React.createClass({
   }
 })
 
-module.exports = Well 
+module.exports = Well

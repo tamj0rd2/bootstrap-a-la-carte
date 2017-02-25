@@ -1,4 +1,4 @@
-var React = require("React")
+var React = require('React')
 
 let ButtonDropdown = React.createClass({
   render: function () {
@@ -8,4 +8,4 @@ let ButtonDropdown = React.createClass({
   }
 })
 
-module.exports = ButtonDropdown 
+module.exports = ButtonDropdown

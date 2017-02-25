@@ -1,4 +1,4 @@
-var React = require("React")
+var React = require('React')
 
 let MediaObject = React.createClass({
   render: function () {

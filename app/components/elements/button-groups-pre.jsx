@@ -1,4 +1,4 @@
-var React = require("React")
+var React = require('React')
 
 let ButtonGroup = React.createClass({
   render: function () {

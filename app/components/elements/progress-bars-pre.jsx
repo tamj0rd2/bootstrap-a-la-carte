@@ -1,4 +1,4 @@
-var React = require("React")
+var React = require('React')
 
 let ProgressBar = React.createClass({
   render: function () {
@@ -8,4 +8,4 @@ let ProgressBar = React.createClass({
   }
 })
 
-module.exports = ProgressBar 
+module.exports = ProgressBar
