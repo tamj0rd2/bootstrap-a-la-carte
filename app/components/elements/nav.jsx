@@ -1,4 +1,4 @@
-var React = require("React")
+var React = require('react')
 
 let Nav = React.createClass({
   render: function () {

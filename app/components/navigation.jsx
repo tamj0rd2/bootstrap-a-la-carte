@@ -27,7 +27,7 @@ let Navigation = React.createClass({
       <nav>
         <h1 className="title">Bootstrap 4.0</h1>
         <ul id="elements">
-          { constants.elements.map(this.createNavLi) }
+          { constants.elementNames.map(this.createNavLi) }
         </ul>
       </nav>
     )

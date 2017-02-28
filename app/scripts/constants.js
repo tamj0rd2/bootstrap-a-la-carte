@@ -1,20 +1,20 @@
-const elements = [
-  'Glyphicons' ,
-  'Dropdowns',
-  'Button groups',
-  'Button dropdowns',
-  'Input groups',
-  'Navs',
-  'Navbar',
-  'Alerts',
-  'Progress bars',
-  'Media object',
-  'List group',
-  'Panels',
-  'Responsive embed',
-  'Wells'
+const elementNames = [
+  'Glyphicon' ,
+  'Dropdown',
+  'Button Group',
+  'Button Dropdown',
+  'Input Group',
+  'Nav',
+  'Navigation Bar',
+  'Alert',
+  'Progress Bar',
+  'Media Object',
+  'List Group',
+  'Panel',
+  'Responsive Embed',
+  'Well'
 ].sort()
 
 module.exports = {
-  elements
+  elementNames
 }
